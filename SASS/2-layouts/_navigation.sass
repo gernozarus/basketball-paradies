@@ -1,0 +1,85 @@
+//Navigation
+
+
+
+.navbar-default
+    background-color: $orange
+    transition: transform 400ms ease-in-out
+    .navbar-nav
+        ul.dropdown-menu
+            margin: -1px
+        li
+            a
+                color: $white
+                &:hover, &:focus
+                    background-color: $black
+                    color: $white
+
+
+        .active
+            a
+                color: $white
+                background-color: $orange-dark
+                &:hover, &:focus
+                    color: $white
+                    background-color: $orange-dark
+
+        .open
+            a
+                color: $white
+                background-color: $black
+                &:hover, &:focus
+                    color: $white
+                    background-color: $black
+
+        .dropdown-menu
+            background-color: $black
+            li
+                a
+                    color: $white
+                    &:hover, &:focus
+                        color: $white
+                        background-color: $orange-dark
+
+    .navbar-toggle
+        .icon-bar
+            background-color: $white
+        &:hover, &:focus
+            background-color: $black
+
+    .navbar-brand
+        color: $white
+        &:hover, &:focus
+            color: #2f1919
+
+    #searchinput
+        width: 100px
+    .navbar-form
+        .glyphicon-search
+            color: $orange-dark
+
+@media (max-width: 767px)
+    .navbar-default
+        .navbar-nav
+
+            .open
+                .dropdown-menu
+                    li
+                        a
+                            color: $white
+                            &:hover, &:focus
+                                color: $white
+                                background-color: $orange-dark
+
+            .active
+                a
+                    background-color: $orange
+                    &:hover, &:focus
+                        background-color: $black
+
+        .navbar-form
+            display: none
+
+@media (min-width: 768px ) and (max-width: 989px)
+    .navbar-form
+        display: none

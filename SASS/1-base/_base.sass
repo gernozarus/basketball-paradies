@@ -1,0 +1,27 @@
+body
+    font-size: $font-size
+    font-family: $font-family
+.navbar-default.fixed
+    position: fixed
+    top: 0
+    z-index: 100
+    width: 100%
+
+    animation-name: Nav-Slide
+    animation-duration: 400ms
+    animation-timing-function: ease-in-out
+    animation-fill-mode: forwards
+    transform-origin: top center
+
+    @keyframes Nav-Slide
+        0%
+            transform: translateY(-100px)
+            opacity: 0
+
+
+        100%
+            transform: translateY(0px)
+            opacity: 1
+
+.btn
+    transition: all 175ms ease-in-out

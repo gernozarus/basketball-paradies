@@ -1,0 +1,111 @@
+// ImageContainer
+
+.row
+    #imagecontainer
+        position: relative
+        display: inline-block
+        text-align: center
+        .btn-default
+            position: absolute
+            right: 80px
+            bottom: 55px
+            width: 200px
+            height: 45px
+            background-color: rgba(255,255,255,0.7)
+            font-size: 15px
+            font-weight: 700
+            border-color: #099dab
+            color: $black
+            padding-top: 8px
+            opacity: 0
+            border-radius: 0
+            box-shadow: 0px 4px 4px rgba(0,0,0,0.7)
+            transition: all 100ms ease-in-out
+
+            &:hover, &:focus
+                background-color: rgba(255,255,255,0.85)
+                box-shadow: 0px 6px 6px 1px rgba(0,0,0,0.7)
+    #imagecontainer2
+        position: relative
+        display: inline-block
+        text-align: center
+        .btn-default
+            position: absolute
+            right: 80px
+            bottom: 55px
+            width: 200px
+            height: 45px
+            background-color: rgba(0,0,0,0.7)
+            font-size: 15px
+            font-weight: 700
+            border-color: #d23f37
+            color: $white
+            padding-top: 8px
+            opacity: 0
+            border-radius: 0
+            box-shadow: 0px 4px 4px rgba(0,0,0,0.7)
+            transition: all 100ms ease-in-out
+            &:hover, &:focus
+                background-color: rgba(0,0,0,0.85)
+                box-shadow: 0px 6px 6px 1px rgba(0,0,0,0.7)
+
+    .col-sm-4
+        p
+            text-align: center
+        h1
+            line-height: 1.5em
+            text-align: center
+            font-size: 34px
+@media (min-width:990px) and (max-width:1200px)
+    #fliegendeButtons
+        .col-sm-4
+            p,h1
+                text-align: left
+            p
+                font-size: $font-size
+            h1
+                font-size: 1.4em
+                font-weight: 700
+
+@media (min-width: 768px) and (max-width: 989px)
+    .row#fliegendeButtons
+        .col-sm-4
+            h1
+                display: none
+            p
+                text-align: left
+
+        #imagecontainer
+            .btn-default
+                position: absolute
+                right: 20px
+                bottom: 55px
+                width: 200px
+                height: 45px
+        #imagecontainer2
+            .btn-default
+                position: absolute
+                right: 20px
+                bottom: 55px
+                width: 200px
+                height: 45px
+
+
+
+
+div#imagecontainer .btn-default.fadeBtnIn,
+div#imagecontainer2 .btn-default.fadeBtnIn
+
+    animation-name: fadeBtnIn
+    animation-duration: 0.7s
+    animation-fill-mode: forwards
+    animation-timing-function: cubic-bezier(0.42, 0, 0.47, 1.76)
+    opacity: 0
+
+    @keyframes fadeBtnIn
+        0%
+            transform: translateY(50px)
+            opacity: 0
+        100%
+            transform: translateY(0px)
+            opacity: 1

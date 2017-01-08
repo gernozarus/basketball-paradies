@@ -1,0 +1,63 @@
+
+
+div.row.imageflipper
+    opacity: 1
+    .header
+        background: -moz-linear-gradient($orange, $orange-dark)
+        background: linear-gradient ($orange, $orange-dark)
+        background: $orange
+        background: -webkit-linear-gradient($orange, #cc7a46)
+        background: -o-linear-gradient($orange, $orange-dark)
+        border-bottom: $black 3px solid
+
+        h3
+            margin: 0px
+            font-size: 35px
+            padding: 10px
+            text-align: center
+            color: $black
+    div.col-sm-6
+        margin: 0px
+        padding: 0px
+        position: relative
+        opacity: 0
+        p
+            position: absolute
+            top: 50%
+            width: 100%
+            text-align: center
+            font-size: 25px
+            color: 000
+
+        img
+            width: 100%
+
+
+div.row.imageflipper.flip
+    perspective: 1000px
+
+    div.col-sm-6
+        transform-origin: top center
+
+
+        @for $i from 2 through 5
+
+            &:nth-child(#{$i})
+                animation:
+                    name: flip
+                    duration: 1s
+                    delay: (150ms * $i) - 300
+                    timing-function: ease-in-out
+                    fill-mode: forwards
+
+    @keyframes flip
+        0%
+            opacity: 0
+            transform: rotateX(-90deg)
+
+        80%
+            transform: rotateX(10deg)
+
+        100%
+            opacity: 1
+            transform: translateX(0deg)
